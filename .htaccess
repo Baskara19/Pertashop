@@ -1,0 +1,13 @@
+# =====================================================
+# .htaccess Pertashop
+# =====================================================
+
+Options -Indexes
+RewriteEngine On
+
+# Redirect root ke login
+RewriteRule ^$ /login.php [L,R=301]
+
+# Default error pages
+ErrorDocument 403 /login.php
+ErrorDocument 404 /login.php
