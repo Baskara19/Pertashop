@@ -17,6 +17,6 @@ try {
         PDO::ATTR_EMULATE_PREPARES   => false,
     ]);
 } catch (PDOException $e) {
-    die("Koneksi database gagal. Silakan coba lagi nanti.");
+    die("Error: " . $e->getMessage());
 }
 ?>
