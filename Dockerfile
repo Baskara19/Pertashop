@@ -28,6 +28,10 @@ WORKDIR /var/www/html
 # Copy semua file project
 COPY . /var/www/html/
 
+# Install Composer dependencies
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
+    && cd /var/www/html && composer install --no-dev --optimize-autoloader
+
 # Set permission
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
