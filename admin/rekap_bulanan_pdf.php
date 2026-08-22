@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/../auth_admin.php';
 require __DIR__ . '/../db.php';
-require __DIR__ . '/../vendor/autoload.inc.php';
+require __DIR__ . '/../vendor/autoload.php';
 use Dompdf\Dompdf;
 
 $bulan = $_GET['bulan'] ?? date('Y-m');
